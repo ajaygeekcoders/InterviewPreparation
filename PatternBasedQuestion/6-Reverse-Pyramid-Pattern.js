@@ -10,15 +10,17 @@ Q. Print below given pattern
 */
 
 let n = 5;
-let k = (n * 2) - 1;
-for (let i = n; i > 0; i--) {
+
+// creating reverse pyramid
+for (let i = 0; i < n; i++) {
     let str = "";
-    for (let j = n-i; j > 0; j--) {
+    // printing spaces
+    for (let j = 0; j < i; j++) {
         str = str + " ";
     }
-    for (let j = k; j > 0; j--) {
+    // printing star
+    for (let k = (n - i) * 2 - 1; k > 0; k--) {
         str = str + "*";
     }
-    k = k - 2;
     console.log(str);
 }
